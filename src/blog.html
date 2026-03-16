@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  ============================================================
+  HEAD SECTION
+  — Same structure as all other pages
+  — Only title and description are unique to this page
+  ============================================================
+-->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO — Blog page -->
+  <title>Blogs</title>
+  <meta name="description" content="Essays and reflections by Adam Nyang on travel, literature, and art." />
+  <meta name="author" content="Adam Nyang" />
+
+  <!-- Open Graph -->
+  <meta property="og:title"       content="Blog" />
+  <meta property="og:description" content="Essays and reflections by Adam Nyang on travel, literature, and art." />
+  <meta property="og:type"        content="website" />
+<meta property="og:url" content="https://adamnyang.gm/blog/" />
+<meta property="og:image" content="https://adamnyang.gm/images/og-image.jpeg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Blog — Adam Nyang" />
+<meta name="twitter:description" content="Essays, travel writing, and literary reflections by Adam Nyang." />
+<meta name="twitter:image" content="https://adamnyang.gm/images/og-image.jpeg" />
+
+  <!-- Font Awesome — social media icons -->
+          <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body>
+
+  <!--
+    ============================================================
+    MOBILE MENU OVERLAY
+    — "active" class is on the Blog link this time
+    ============================================================
+  -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation menu">
+    <a href="/">Home</a>
+    <div class="mobile-menu__divider"></div>
+    <a href="/about/">About</a>
+    <div class="mobile-menu__divider"></div>
+    <a href="/books/">Books</a>
+    <div class="mobile-menu__divider"></div>
+    <a href="/publications/">Publications</a>
+    <div class="mobile-menu__divider"></div>
+    <a href="/blog/" class="active">Blog</a>
+    <div class="mobile-menu__divider"></div>
+    <a href="/contact/">Contact</a>
+  </div>
+
+
+  <!--
+    ============================================================
+    NAVIGATION BAR
+    — "active" class is on the Blog link
+    ============================================================
+  -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <a href="/" class="navbar__logo">Adam Nyang</a>
+    <ul class="navbar__links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/books/">Books</a></li>
+      <li><a href="/publications/">Publications</a></li>
+      <li><a href="/blog/" class="active">Blog</a></li>
+      <li><a href="/contact/">Contact</a></li>
+    </ul>
+    <button
+      class="hamburger"
+      id="hamburger"
+      aria-label="Toggle navigation menu"
+      aria-expanded="false"
+    >
+      <span class="hamburger__line"></span>
+      <span class="hamburger__line"></span>
+      <span class="hamburger__line"></span>
+    </button>
+  </nav>
+
+
+  <!--
+    ============================================================
+    PAGE HERO BANNER
+    — data-bg sets the large decorative background word
+    ============================================================
+  -->
+  <section class="page-hero" data-bg="Blog">
+    <p class="page-hero__label">Essays &amp; Reflections</p>
+    <h1 class="page-hero__title">The Blog</h1>
+  </section>
+
+
+  <!--
+    ============================================================
+    CATEGORY FILTER TABS
+    — Clicking a tab filters the posts grid below
+    — "All Posts" shows everything
+    — data-filter value must match data-category on each card
+    — JavaScript handles the filtering logic at the bottom
+    ============================================================
+  -->
+  <div class="blog-filters" role="tablist" aria-label="Filter blog posts by category">
+    <button class="filter-btn active" data-filter="all"        role="tab" aria-selected="true">All Posts</button>
+    <button class="filter-btn"        data-filter="travel"     role="tab" aria-selected="false">Travel</button>
+    <button class="filter-btn"        data-filter="literature" role="tab" aria-selected="false">Literature</button>
+    <button class="filter-btn"        data-filter="art"        role="tab" aria-selected="false">Art</button>
+  </div>
+
+
+  <!--
+    ============================================================
+    BLOG POSTS GRID
+    — Each <article> = one blog post card
+    — data-category must be: "travel", "literature", or "art"
+      (lowercase — must match the filter button data-filter)
+
+    ── HOW TO ADD A NEW BLOG POST ──
+    1. Copy one complete <article class="blog-card"> block
+    2. Paste it at the TOP of the grid (newest post first)
+    3. Update the following:
+         data-category       → "travel", "literature", or "art"
+         .blog-card__cat     → visible category label text
+         .blog-card__date    → e.g. "April 2025"
+         .blog-card__title   → the post title
+         .blog-card__excerpt → short 1-2 sentence preview
+         .blog-card__read href → link to the full post page
+    4. For a real featured image:
+         Save image in images/ folder
+         Add inside .blog-card__img:
+         <img src="images/your-image.jpg" alt="description" />
+
+    ── PLACEHOLDER NOTE ──
+    All posts below are placeholder examples.
+    REPLACE with her real blog posts when she starts writing.
+    ============================================================
+  -->
+  <div class="blog-grid" id="blogGrid">
+
+   <p class="blog-empty" id="blogEmpty"> No posts in this category yet. Check back soon. </p>
+   {% for post in collections.posts %}
+   <article class="blog-card fade-up" data-category="{{post.data.category | lower}}">
+    <div class="blog-card__img" style="background: linear-gradient(135deg, #C9B99A 0%, #2C4A3E 100%);">
+      {% if post.data.cover %}<img src="{{post.data.cover}}" alt="{{post.data.title}}"
+      style="width:100%;height:100%;object-fit:cover;"/> {% endif %}
+      <span class="blog-card__cat">{{ post.data.category}}</span>
+    </div>
+    <div class="blog-card__body">
+      <p class="blog-card__date">{{post.date}}</p>
+      <h2 class="blog-card__title">{{ post.date.title }}</h2>
+      <p class="blog-card__excerpt">{{post.data.excerpt}}</p>
+      <a href="{{post.url}}" class="blog-card__read">Read More-></a>
+    </div>
+  </article>
+  {% endfor %}
+
+  </div>
+
+
+  <!--
+    ============================================================
+    NEWSLETTER SECTION
+    — Same on every page
+    ============================================================
+  -->
+  <section class="newsletter">
+    <p class="section-label section-label--light">Stay Connected</p>
+    <h2 class="newsletter__title">Letters from the writing desk</h2>
+    <p class="newsletter__sub">
+      New essays, book updates, and stories from the road —
+      delivered quietly to your inbox.
+    </p>
+    <p class="newsletter__success" id="newsletterSuccess">
+      Thank you for subscribing. Welcome to the circle. ✦
+    </p>
+    <form class="newsletter__form" id="newsletterForm" novalidate>
+      <input
+        type="email"
+        class="newsletter__input"
+        placeholder="Your email address"
+        aria-label="Email address"
+        required
+      />
+      <button type="submit" class="newsletter__btn">Subscribe</button>
+    </form>
+  </section>
+
+
+  <!--
+    ============================================================
+    FOOTER
+    — Same on every page
+    ============================================================
+  -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__grid">
+
+      <!-- Branding -->
+      <div>
+        <span class="footer__logo">Adam Nyang</span>
+        <p class="footer__tagline">
+          Author. Storyteller.<br>Gambian Voice.
+        </p>
+      </div>
+
+      <!-- Navigation -->
+      <div>
+        <span class="footer__col-title">Navigate</span>
+       <ul class="footer__links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/books/">Books</a></li>
+          <li><a href="/publications/">Publications </a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Social icons -->
+       <div>
+        <span class="footer__col-title">Follow Adam💕</span>
+        <div class="footer__socials">
+
+          <!-- REPLACE href="#" with her real social media URLs when she sends them -->
+          <a href="https://www.instagram.com/adam_chumbay?igsh=MXM5Z20xOGpsY3ppbw%3D%3D&utm_source=qr" class="footer__social-icon" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.facebook.com/share/1FTnyGYah6/" class="footer__social-icon" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="https://x.com/adam_nyang?s=11
+" class="footer__social-icon" aria-label="Twitter / X" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-x-twitter"></i>
+          </a>
+          <a href="https://www.threads.com/@adam_chumbay?invite=0" class="footer__social-icon" aria-label="Threads" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-threads"></i>
+          </a>
+          <a href="https://www.tiktok.com/@adamnyang?_r=1&_t=ZS-94dWAv0bbHh
+" class="footer__social-icon" aria-label="Tiktok" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-tiktok"></i>
+          </a>
+
+        </div>
+      </div>
+
+    </div>
+    <div class="footer__divider"></div>
+    <div class="footer__bottom">
+      <span class="footer__copy">© 2026 Adam Nyang. All rights reserved.</span>
+      <span class="footer__copy">adamnyang.gm</span>
+    </div>
+  </footer>
+
+
+  <!-- JavaScript file — same on every page -->
+  <script src="/js/main.js" defer></script>
+
+  <!--
+    ============================================================
+    BLOG FILTER SCRIPT
+    — Handles category filtering on this page only
+    — Kept here (not in main.js) because it is only
+      needed on the blog page
+    ============================================================
+  -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+      // Get all filter buttons, blog cards, and the empty message
+      var filterBtns = document.querySelectorAll('.filter-btn');
+      var blogCards  = document.querySelectorAll('.blog-card');
+      var blogEmpty  = document.getElementById('blogEmpty');
+
+      // Listen for a click on each filter button
+      filterBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+
+          // ── Update active button state ──
+          filterBtns.forEach(function (b) {
+            b.classList.remove('active');
+            b.setAttribute('aria-selected', 'false');
+          });
+          btn.classList.add('active');
+          btn.setAttribute('aria-selected', 'true');
+
+          // ── Get chosen filter value ──
+          // e.g. "travel", "literature", "art", or "all"
+          var filter = btn.getAttribute('data-filter');
+
+          // ── Show or hide each card based on category ──
+          var visibleCount = 0;
+
+          blogCards.forEach(function (card) {
+            var category = card.getAttribute('data-category');
+
+            if (filter === 'all' || category === filter) {
+              // Show this card
+              card.classList.remove('is-hidden');
+              visibleCount++;
+            } else {
+              // Hide this card
+              card.classList.add('is-hidden');
+            }
+          });
+
+          // ── Show empty message if no cards visible ──
+          if (visibleCount === 0) {
+            blogEmpty.classList.add('is-visible');
+          } else {
+            blogEmpty.classList.remove('is-visible');
+          }
+
+        });
+      });
+
+    });
+  </script>
+
+</body>
+</html>

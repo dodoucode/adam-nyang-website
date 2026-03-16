@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  ============================================================
+  HEAD SECTION
+  — Same structure as all other pages
+  — Only title and description are unique to this page
+  ============================================================
+-->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO — Publications page -->
+  <title>Publications</title>
+  <meta name="description" content="Literary journal publications and featured works by Adam Nyang — a Gambian author published across Africa and beyond." />
+  <meta name="author" content="Adam Nyang" />
+
+  <!-- Open Graph -->
+  <meta property="og:title"       content="Publications" />
+  <meta property="og:type"        content="website" />
+<meta property="og:description" content="Literary journal publications and featured works by Adam Nyang across Africa and beyond." />
+<meta property="og:url" content="https://adamnyang.gm/publications/" />
+<meta property="og:image" content="https://adamnyang.gm/images/og-image.jpeg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Publications — Adam Nyang" />
+<meta name="twitter:description" content="Literary journal publications and featured works by Adam Nyang." />
+<meta name="twitter:image" content="https://adamnyang.gm/images/og-image.jpeg" />
+  
+
+  <!-- Font Awesome — social media icons -->
+          <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body>
+
+  <!--
+    ============================================================
+    MOBILE MENU OVERLAY
+    — "active" class is on the Publications link this time
+    ============================================================
+  -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation menu">
+    <a href="/">Home</a>
+    <div class="mobile-menu__divider"></div>
+    <a href="/about/">About</a>
+    <div class="mobile-menu__divider"></div>
+    <a href="/books/">Books</a>
+    <div class="mobile-menu__divider"></div>
+    <a href="/publications/" class="active">Publications</a>
+    <div class="mobile-menu__divider"></div>
+    <a href="/blog/">Blog</a>
+    <div class="mobile-menu__divider"></div>
+    <a href="/contact/">Contact</a>
+  </div>
+
+
+  <!--
+    ============================================================
+    NAVIGATION BAR
+    — "active" class is on the Publications link
+    ============================================================
+  -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <a href="/" class="navbar__logo">Adam Nyang</a>
+    <ul class="navbar__links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/books/">Books</a></li>
+      <li><a href="/publications/" class="active">Publications</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/contact/">Contact</a></li>
+    </ul>
+    <button
+      class="hamburger"
+      id="hamburger"
+      aria-label="Toggle navigation menu"
+      aria-expanded="false"
+    >
+      <span class="hamburger__line"></span>
+      <span class="hamburger__line"></span>
+      <span class="hamburger__line"></span>
+    </button>
+  </nav>
+
+
+  <!--
+    ============================================================
+    PAGE HERO BANNER
+    — data-bg sets the large decorative background word
+    ============================================================
+  -->
+  <section class="page-hero" data-bg="Published">
+    <p class="page-hero__label">Literary Journal Features</p>
+    <h1 class="page-hero__title">Publications</h1>
+  </section>
+
+
+  <!--
+    ============================================================
+    INTRO TEXT
+    — Short paragraph introducing the publications section
+    — REPLACE with her own words if she prefers
+    ============================================================
+  -->
+  <div class="publications-intro">
+    <p class="section-label">Featured Work</p>
+    <p class="body-text">
+      A selection of Adam Nyang's published essays, short fiction, and
+      literary work featured in journals and publications across Africa
+      and the wider world. 
+    </p>
+  </div>
+
+
+  <!--
+    ============================================================
+    PUBLICATIONS LIST
+    — Each .pub-entry = one published piece
+    — Layout per row: Year | Title + Journal | Read Link
+    — Listed newest first (top = most recent)
+
+    ── HOW TO ADD A NEW PUBLICATION ──
+    Copy one complete pub-entry block and paste it
+    ABOVE all others (at the very top of the list).
+    Then update:
+      .pub-entry__year  → the year it was published
+      .pub-entry__title → the title of the piece
+      .pub-entry__journal → journal name + issue if known
+      .pub-entry__link href → the real URL to the piece online
+
+    If no link exists, replace the <a> tag with:
+    <span class="pub-entry__link" style="color:var(--muted);cursor:default;">Print Only</span>
+
+    ── PLACEHOLDER NOTE ──
+    ALL entries below are placeholder examples.
+    REPLACE every single one with her real publications
+    when she sends the list.
+    ============================================================
+  -->
+ <section class="publications-list">
+
+  {% for pub in collections.publications %}
+  <div class="pub-entry fade-up">
+    <span class="pub-entry__year">{{ pub.data.year }}</span>
+    <div class="pub-entry__details">
+      <h2 class="pub-entry__title">{{ pub.data.title }}</h2>
+      <p class="pub-entry__journal">{{ pub.data.publication }}</p>
+    </div>
+    {% if pub.data.link %}
+    <a href="{{ pub.data.link }}" class="pub-entry__link" target="_blank" rel="noopener noreferrer">Read Online →</a>
+    {% else %}
+    <span class="pub-entry__link" style="color:var(--muted);cursor:default;border-bottom:none;">Print Only</span>
+    {% endif %} 
+  </div>
+  {% endfor %}
+
+</section>
+
+
+  <!--
+    ============================================================
+    NEWSLETTER SECTION
+    — Same on every page
+    ============================================================
+  -->
+  <section class="newsletter">
+    <p class="section-label section-label--light">Stay Connected</p>
+    <h2 class="newsletter__title">Letters from the writing desk</h2>
+    <p class="newsletter__sub">
+      New essays, book updates, and stories from the road —
+      delivered quietly to your inbox.
+    </p>
+    <p class="newsletter__success" id="newsletterSuccess">
+      Thank you for subscribing. Welcome to the circle. ✦
+    </p>
+    <form class="newsletter__form" id="newsletterForm" novalidate>
+      <input
+        type="email"
+        class="newsletter__input"
+        placeholder="Your email address"
+        aria-label="Email address"
+        required
+      />
+      <button type="submit" class="newsletter__btn">Subscribe</button>
+    </form>
+  </section>
+
+
+  <!--
+    ============================================================
+    FOOTER
+    — Same on every page
+    ============================================================
+  -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__grid">
+
+      <!-- Branding -->
+      <div>
+        <span class="footer__logo">Adam Nyang</span>
+        <p class="footer__tagline">
+          Author. Storyteller.<br>Gambian Voice.
+        </p>
+      </div>
+
+      <!-- Navigation -->
+      <div>
+        <span class="footer__col-title">Navigate</span>
+        <ul class="footer__links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/books/">Books</a></li>
+          <li><a href="/publications/">Publications</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Social icons -->
+       <div>
+        <span class="footer__col-title">Follow Adam💕</span>
+        <div class="footer__socials">
+
+          <!-- REPLACE href="#" with her real social media URLs when she sends them -->
+          <a href="https://www.instagram.com/adam_chumbay?igsh=MXM5Z20xOGpsY3ppbw%3D%3D&utm_source=qr" class="footer__social-icon" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.facebook.com/share/1FTnyGYah6/" class="footer__social-icon" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="https://x.com/adam_nyang?s=11
+" class="footer__social-icon" aria-label="Twitter / X" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-x-twitter"></i>
+          </a>
+          <a href="https://www.threads.com/@adam_chumbay?invite=0" class="footer__social-icon" aria-label="Threads" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-threads"></i>
+          </a>
+          <a href="https://www.tiktok.com/@adamnyang?_r=1&_t=ZS-94dWAv0bbHh
+" class="footer__social-icon" aria-label="Tiktok" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-tiktok"></i>
+          </a>
+
+        </div>
+      </div>
+
+    </div>
+    <div class="footer__divider"></div>
+    <div class="footer__bottom">
+      <span class="footer__copy">© 2026 Adam Nyang. All rights reserved.</span>
+      <span class="footer__copy">adamnyang.gm</span>
+    </div>
+  </footer>
+
+
+  <!-- JavaScript file — same on every page -->
+  <script src="/js/main.js" defer></script>
+
+</body>
+</html>

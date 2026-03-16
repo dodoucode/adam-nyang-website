@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found — Adam Nyang</title>
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <style>
+    .error-page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 4rem 2rem;
+      background-color: var(--ink);
+      color: var(--cream);
+    }
+    .error-page__number {
+      font-family: var(--font-serif);
+      font-size: clamp(8rem, 20vw, 16rem);
+      font-weight: 300;
+      font-style: italic;
+      color: rgba(201, 185, 154, 0.15);
+      line-height: 1;
+      margin-bottom: 0;
+    }
+    .error-page__title {
+      font-family: var(--font-serif);
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--cream);
+      margin-bottom: 1.5rem;
+    }
+    .error-page__text {
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      font-weight: 300;
+      color: rgba(247, 243, 238, 0.6);
+      line-height: 1.8;
+      max-width: 400px;
+      margin-bottom: 3rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="error-page">
+    <p class="error-page__number">404</p>
+    <h1 class="error-page__title">This page got lost in the story</h1>
+    <p class="error-page__text">
+      The page you're looking for doesn't exist or may have moved. 
+      Let's get you back to somewhere familiar.
+    </p>
+    <div class="btn-row" style="justify-content:center;gap:1.5rem;">
+      <a href="/" class="btn btn--outline-light">Back to Home</a>
+      <a href="/blog/" class="btn--ghost" style="color:var(--sand);border-color:var(--sand);">Read the Blog</a>
+    </div>
+  </div>
+  <script src="/js/main.js" defer></script>
+</body>
+</html>

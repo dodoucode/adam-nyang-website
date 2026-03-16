@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ title }} — Adam Nyang</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation menu">
+    <a href="/">Home</a>
+    <div class="mobile-menu__divider"></div>
+    <a href="/about/">About</a>
+    <div class="mobile-menu__divider"></div>
+    <a href="/books/">Books</a>
+    <div class="mobile-menu__divider"></div>
+    <a href="/publications/">Publications</a>
+    <div class="mobile-menu__divider"></div>
+    <a href="/blog/" class="active">Blog</a>
+    <div class="mobile-menu__divider"></div>
+    <a href="/contact/">Contact</a>
+  </div>
+
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <a href="/" class="navbar__logo">Adam Nyang</a>
+    <ul class="navbar__links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/books/">Books</a></li>
+      <li><a href="/publications/">Publications</a></li>
+      <li><a href="/blog/" class="active">Blog</a></li>
+      <li><a href="/contact/">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span class="hamburger__line"></span>
+      <span class="hamburger__line"></span>
+      <span class="hamburger__line"></span>
+    </button>
+  </nav>
+
+  <section class="page-hero" data-bg="Blog">
+    <p class="page-hero__label">{{ category }}</p>
+    <h1 class="page-hero__title">{{ title }}</h1>
+  </section>
+
+  <article style="max-width:760px;margin:0 auto;padding:5rem 2rem 8rem;">
+    <div style="display:flex;align-items:center;gap:2rem;margin-bottom:3rem;padding-bottom:2rem;border-bottom:1px solid rgba(201,185,154,0.3);">
+      <span style="font-family:var(--font-sans);font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--sand);">{{ date }}</span>
+      <span style="font-family:var(--font-sans);font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);">{{ category }}</span>
+    </div>
+    <div style="font-family:var(--font-serif);font-size:1.1rem;font-weight:300;line-height:2;color:var(--muted);">
+      {{ content | safe }}
+    </div>
+    <div style="margin-top:4rem;padding-top:2rem;border-top:1px solid rgba(201,185,154,0.3);">
+      <a href="/blog/" class="btn btn--dark">← Back to Blog</a>
+    </div>
+  </article>
+
+  <section class="newsletter">
+    <p class="section-label section-label--light">Stay Connected</p>
+    <h2 class="newsletter__title">Letters from the writing desk</h2>
+    <p class="newsletter__sub">New essays, book updates, and stories from the road — delivered quietly to your inbox.</p>
+    <p class="newsletter__success" id="newsletterSuccess">Thank you for subscribing. Welcome to the circle. ✦</p>
+    <form class="newsletter__form" id="newsletterForm" action="https://92ba5699.sibforms.com/serve/MUIFAOVdDsbJrEbWt6PeJ_7cbO72Y26yzyUwY-hO2begO6DrthWCnqaYnpZGCx1d7DdeObZRpHW9Y5AF8bX4OMn4SJBN_fZprq3TaUbDXrJWdpLnqr_cO6q3wGuCjzeqUzWB-Nw8Qiujd6cG0a2tAWpvScFB2Iew_zNqBtZ6e3RY0RqvJHpXeZDozJHfD-aU51UBqHvfaQp9PcmJlw==" method="POST">
+      <input type="email" class="newsletter__input" placeholder="Your email address" aria-label="Email address" required />
+      <button type="submit" class="newsletter__btn">Subscribe</button>
+    </form>
+  </section>
+
+  <footer class="footer" role="contentinfo">
+    <div class="footer__grid">
+      <div>
+        <span class="footer__logo">Adam Nyang</span>
+        <p class="footer__tagline">Author. Storyteller.<br>Gambian Voice.</p>
+      </div>
+      <div>
+        <span class="footer__col-title">Navigate</span>
+        <ul class="footer__links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/books/">Books</a></li>
+          <li><a href="/publications/">Publications</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="footer__col-title">Follow</span>
+        <div class="footer__socials">
+          <a href="#" class="footer__social-icon" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="footer__social-icon" aria-label="Twitter / X" target="_blank" rel="noopener noreferrer"><i class="fab fa-x-twitter"></i></a>
+          <a href="#" class="footer__social-icon" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__divider"></div>
+    <div class="footer__bottom">
+      <span class="footer__copy">© 2025 Adam Nyang. All rights reserved.</span>
+      <span class="footer__copy">adamnyang.gm</span>
+    </div>
+  </footer>
+
+  <script src="/js/main.js" defer></script>
+</body>
+</html>

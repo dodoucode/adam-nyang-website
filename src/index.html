@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  ============================================================
+  HEAD SECTION
+  — Meta info, page title, fonts, stylesheet, Font Awesome
+  — Nothing in here is visible on the page
+  ============================================================
+-->
+<head>
+  <!-- Character encoding — always first -->
+  <meta charset="UTF-8" />
+
+  <!-- Makes the site scale correctly on mobile devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ── SEO ──
+       These help the site appear on Google and look good
+       when shared on WhatsApp, Facebook, etc.
+       REPLACE the content with her real details. -->
+  <title>Adam Nyang — Author</title>
+  <meta name="description" content="Adam Nyang is a Gambian author writing at the intersection of identity, place, and the human experience. Explore her books, blog, and publications." />
+  <meta name="keywords"    content="Adam Nyang, Gambian author, African literature, Still Waters, Kani Sey, Betting on Love" />
+  <meta name="author"      content="Adam Nyang" />
+
+  <!-- Open Graph — controls how the page looks when shared on social media -->
+  <meta property="og:title"       content="Adam Nyang — Author" />
+  <meta property="og:description" content="Gambian author writing at the intersection of identity, place, and the human experience." />
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://adamnyang.gm" />
+  <meta property="og:image" content="https://adamnyang.gm/images/og-image.jpeg" />
+  <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Adam Nyang — Author" />
+<meta name="twitter:description" content="Gambian author writing at the intersection of identity, place, and the human experience." />
+<meta name="twitter:image" content="https://adamnyang.gm/images/og-image.jpeg" />
+
+  <!-- ── FONT AWESOME ──
+       Free icon library used for social media icons
+       Loaded from a CDN — no download needed -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+  <!-- ── MAIN STYLESHEET ──
+       Links to our style.css file in the css/ folder -->
+       <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/css/style.css" />
+
+  <!-- ── FAVICON ──
+       The small icon shown in the browser tab
+       REPLACE with her real favicon once she provides one
+  <link rel="icon" type="image/png" href="images/favicon.png" /> -->
+</head>
+
+<!--
+  ============================================================
+  BODY SECTION
+  — Everything visible on the page goes here
+  ============================================================
+-->
+<body>
+
+  <!--
+    ============================================================
+    MOBILE MENU OVERLAY
+    — Full-screen menu shown on mobile when hamburger is tapped
+    — Hidden by default, shown/hidden via JavaScript
+    ============================================================
+  -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation menu">
+    <a href="/" class="active">Home</a>
+    <div class="mobile-menu__divider"></div>
+    <a href="/about/">About</a>
+    <div class="mobile-menu__divider"></div>
+    <a href="/books/">Books</a>
+    <div class="mobile-menu__divider"></div>
+    <a href="/publications/">Publications</a> 
+    <div class="mobile-menu__divider"></div>
+    <a href="/blog/">Blog</a>
+    <div class="mobile-menu__divider"></div>
+    <a href="/contact/">Contact</a>
+  </div>
+
+
+  <!--
+    ============================================================
+    NAVIGATION BAR
+    — Fixed at the top, visible on all pages while scrolling
+    — Logo on the left, page links on the right
+    — Hamburger icon only shown on mobile screens
+    ============================================================
+  -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+
+    <!-- Logo — always links back to homepage -->
+    <a href="/" class="navbar__logo">Adam Nyang</a>
+
+    <!-- Desktop navigation links -->
+    <ul class="navbar__links">
+      <!-- "active" class highlights the current page -->
+      <li><a href="/" class="active">Home</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/books/">Books</a></li>
+      <li><a href="/publications/">Publications</a></li> 
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/contact/">Contact</a></li>
+    </ul>
+
+    <!-- Hamburger button — only visible on mobile -->
+    <button
+      class="hamburger"
+      id="hamburger"
+      aria-label="Toggle navigation menu"
+      aria-expanded="false"
+    >
+      <span class="hamburger__line"></span>
+      <span class="hamburger__line"></span>
+      <span class="hamburger__line"></span>
+    </button>
+
+  </nav>
+
+
+  <!--
+    ============================================================
+    HERO SECTION
+    — The first thing visitors see when they land on the site
+    — Left column: author name, tagline, CTA buttons
+    — Right column: author photo
+    ============================================================
+  -->
+  <section class="hero">
+
+    <!-- Left — Text content -->
+    <div class="hero__left">
+
+      <!-- Small text above the name -->
+      <p class="hero__eyebrow">From The Gambia&nbsp;·&nbsp;To The World&nbsp;·&nbsp;And Beyond </p>
+
+      <!-- Author name — the largest text on the page -->
+      <!-- <em> makes the second line italic and green via CSS -->
+      <h1 class="hero__name">
+        Adam<br>
+        <em>Nyang</em>
+      </h1>
+
+      <!-- Short literary tagline
+           REPLACE with her real tagline when she sends it -->
+      <p class="hero__tagline">
+        Writing at the intersection of identity,
+        place, and the human experience.
+      </p>
+
+      <!-- Call to action buttons -->
+      <div class="btn-row hero-cta">
+        <a href="/books/" class="btn btn--dark">Explore Books</a>
+        <a href="/blog/"  class="btn--ghost">Read the Blog</a>
+      </div>
+
+    </div>
+
+    <!-- Right — Author photo -->
+    <div class="hero__right">
+      <div class="hero__img-wrap">
+
+        <!--
+          ── PHOTO INSTRUCTIONS ──
+          When she sends her professional author photo:
+          1. Save the file in the images/ folder as: author-hero.jpg
+          2. Delete the entire hero__img-placeholder div below
+          3. Remove the comment marks from the img tag below
+        -->
+
+         <img
+          src="/images/adam2.jpg"
+          alt="Adam Nyang — Author"
+        /> 
+
+        <!-- Placeholder shown until real photo is added 
+        <div class="hero__img-placeholder" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.8">
+            <circle cx="12" cy="8" r="4" />
+            <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
+          </svg>
+          Author Photo
+        </div> -->
+
+      </div>
+    </div>
+
+    <!-- Animated scroll indicator at the bottom left
+    <div class="hero__scroll" aria-hidden="true">
+      <div class="hero__scroll-line"></div>
+      <span class="hero__scroll-text">Scroll</span>
+    </div> -->
+
+  </section>
+
+
+  <!--
+    ============================================================
+    FEATURED BOOK SECTION
+    — Dark background section showcasing "Still Waters"
+    — Left: book cover image  |  Right: book details
+    ============================================================
+  -->
+ {% set featuredBook = collections.books[0] %}
+{% if featuredBook %}
+<section class="featured-book">
+
+  <div class="featured-book__cover-wrap">
+    {% if featuredBook.data.cover %}
+    <img src="{{ featuredBook.data.cover }}" alt="{{ featuredBook.data.title }} cover" class="featured-book__cover-img" />
+    {% else %}
+    <div class="featured-book__cover-placeholder" aria-hidden="true">
+      <p class="featured-book__placeholder-title">{{ featuredBook.data.title }}</p>
+      <p class="featured-book__placeholder-author">{{ featuredBook.data.penname if featuredBook.data.penname else "Adam Nyang" }}</p>
+    </div>
+    {% endif %}
+  </div>
+
+  <div class="featured-book__info">
+    <p class="section-label">Latest Release</p>
+    <h2 class="featured-book__title">{{ featuredBook.data.title }}</h2>
+    <p class="featured-book__desc">{{ featuredBook.data.description }}</p>
+    <div class="badge-row">
+      <span class="badge">Available Now</span>
+      {% if featuredBook.data.publisher %}<span class="badge">{{ featuredBook.data.publisher }}</span>{% endif %}
+    </div>
+    <div class="btn-row">
+      {% if featuredBook.data.buylink %}
+      <a href="{{ featuredBook.data.buylink }}" class="btn btn--accent">Buy Now</a>
+      {% endif %}
+    </div>
+  </div>
+
+</section>
+{% endif %}
+
+
+  <!--
+    ============================================================
+    ABOUT SNIPPET SECTION
+    — Short introduction to the author
+    — Left: text + achievements  |  Right: photo
+    ============================================================
+  -->
+  <section class="about-snippet">
+
+    <!-- Left — Text -->
+    <div class="about-snippet__text">
+
+      <p class="section-label">About the Author</p>
+
+      <h2 class="about-snippet__heading">
+        A voice shaped by<br>
+        <span class="italic-accent">travel, art &amp; literature</span>
+      </h2>
+
+      <!-- REPLACE with her real bio when she sends it -->
+      <p class="body-text">
+        Adam Nyang is a Gambian author whose work explores the intersections
+        of culture, memory, and identity. Her writing has taken her across
+        continents — from literary residencies in Ghana to celebrated
+        circles in the United States.
+      </p>
+
+      <!-- Key achievements -->
+      <ul class="achievements">
+        <li class="achievement">Ghana Literary Residency, 2022</li>
+        <li class="achievement">U.S. Changemakers Cohort — 1 of 18 writers selected</li>
+        <li class="achievement">Scholarship awarded for novel development</li>
+        <li class="achievement">International academic experience</li>
+      </ul>
+
+      <a href="/about/" class="btn btn--dark">Full Biography</a>
+
+    </div>
+
+    <!-- Right — Photo -->
+    <div class="about-snippet__photo">
+
+      <!--
+        ── PHOTO INSTRUCTIONS ──
+        When she sends her about/profile photo:
+        1. Save it in images/ folder as: author-about.jpg
+        2. Delete the about-snippet__photo-placeholder div below
+        3. Remove the comment marks from the img tag below
+      -->
+
+       <img
+        src="/images/adam4.jpg"
+        alt="Adam Nyang — Author"
+      /> 
+
+      <!-- Placeholder until real photo is provided 
+      <div class="about-snippet__photo-placeholder" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.8">
+          <circle cx="12" cy="8" r="4" />
+          <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
+        </svg>
+        Author Photo
+      </div> -->
+
+    </div>
+
+  </section>
+
+
+  <!--
+    ============================================================
+    BLOG PREVIEW SECTION
+    — Shows the 3 most recent blog posts
+    — Update card content when she writes real posts
+    ============================================================
+  -->
+  <section class="blog-preview">
+
+    <div class="section-header">
+      <h2 style="font-family:var(--font-serif);font-size:clamp(2rem,3vw,2.8rem);font-weight:300;font-style:italic;">
+        From the Blog
+      </h2>
+      <a href="/blog/" class="link-arrow">View All Posts</a>
+    </div>
+
+    <div class="blog-preview__grid">
+
+      {% for post in collections.posts.slice(0, 2) %}
+      <article class="blog-card" data-category="{{ post.data.category | lower }}">
+        <div class="blog-card__img" style="background:linear-gradient(135deg,#C9B99A 0%,#2C4A3E 100%);">
+          {% if post.data.cover %}
+          <img src="{{ post.data.cover }}" alt="{{ post.data.title }}" style="width:100%;height:100%;object-fit:cover;" />
+          {% endif %}
+          <span class="blog-card__cat">{{ post.data.category }}</span>
+        </div>
+        <div class="blog-card__body">
+          <p class="blog-card__date">{{ post.date }}</p>
+          <h3 class="blog-card__title">{{ post.data.title }}</h3>
+          <p class="blog-card__excerpt">{{ post.data.excerpt }}</p>
+          <a href="{{ post.url }}" class="blog-card__read">Read More →</a>
+        </div>
+      </article>
+      {% endfor %}
+
+    </div>
+
+  </section>
+
+
+  <!--
+    ============================================================
+    NEWSLETTER SECTION
+    — Email signup form
+    — Will be connected to MailerLite during deployment step
+    ============================================================
+  -->
+  <section class="newsletter">
+
+    <p class="section-label section-label--light">Stay Connected</p>
+
+    <h2 class="newsletter__title">Letters from the writing desk</h2>
+
+    <p class="newsletter__sub">
+      New essays, book updates, and stories from the road —
+      delivered quietly to your inbox.
+    </p>
+
+    <!-- Success message — hidden until form is submitted -->
+    <p class="newsletter__success" id="newsletterSuccess">
+      Thank you for subscribing. Welcome to the circle. ✦
+    </p>
+
+    <!-- Signup form -->
+    <form class="newsletter__form" id="newsletterForm" novalidate>
+      <input
+        type="email"
+        class="newsletter__input"
+        placeholder="Your email address"
+        aria-label="Email address"
+        required
+      />
+      <button type="submit" class="newsletter__btn">Subscribe</button>
+    </form>
+
+  </section>
+
+
+  <!--
+    ============================================================
+    FOOTER
+    — Three columns: branding, navigation, social links
+    — Same footer is used on every page
+    ============================================================
+  -->
+  <footer class="footer" role="contentinfo">
+
+    <div class="footer__grid">
+
+      <!-- Column 1 — Branding -->
+      <div>
+        <span class="footer__logo">Adam Nyang</span>
+        <p class="footer__tagline">
+          Author. Storyteller.<br>Gambian Voice.
+        </p>
+      </div>
+
+      <!-- Column 2 — Navigation links -->
+      <div>
+        <span class="footer__col-title">Navigate</span>
+        <ul class="footer__links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/books/">Books</a></li>
+          <li><a href="/publications/">Publications</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3 — Social media icons -->
+      <div>
+        <span class="footer__col-title">Follow Adam💕</span>
+        <div class="footer__socials">
+
+          <!-- REPLACE href="#" with her real social media URLs when she sends them -->
+          <a href="https://www.instagram.com/adam_chumbay?igsh=MXM5Z20xOGpsY3ppbw%3D%3D&utm_source=qr" class="footer__social-icon" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.facebook.com/share/1FTnyGYah6/" class="footer__social-icon" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="https://x.com/adam_nyang?s=11
+" class="footer__social-icon" aria-label="Twitter / X" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-x-twitter"></i>
+          </a>
+          <a href="https://www.threads.com/@adam_chumbay?invite=0" class="footer__social-icon" aria-label="Threads" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-threads"></i>
+          </a>
+          <a href="https://www.tiktok.com/@adamnyang?_r=1&_t=ZS-94dWAv0bbHh
+" class="footer__social-icon" aria-label="Tiktok" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-tiktok"></i>
+          </a>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Divider line -->
+    <div class="footer__divider"></div>
+
+    <!-- Copyright row -->
+    <div class="footer__bottom">
+      <span class="footer__copy">© 2026 Adam Nyang. All rights reserved.</span>
+      <span class="footer__copy">adamnyang.gm</span>
+    </div>
+
+  </footer>
+
+
+  <!--
+    JavaScript — loaded at the bottom so HTML renders first
+    "defer" ensures it only runs after the page is fully loaded
+  -->
+  <script src="/js/main.js" defer></script>
+
+</body>
+</html>

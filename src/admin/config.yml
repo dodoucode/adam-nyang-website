@@ -1,0 +1,45 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "src/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "src/posts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Category", name: "category", widget: "select", options: ["Travel", "Literature", "Art"] }
+      - { label: "Excerpt", name: "excerpt", widget: "text" }
+      - { label: "Cover Image", name: "cover", widget: "image", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+      - name: "books"
+    label: "Books"
+    folder: "src/books-data"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Cover Image", name: "cover", widget: "image" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Buy Link", name: "buylink", widget: "string", required: false }
+      - { label: "Pen Name", name: "penname", widget: "string", required: false }
+      - { label: "Publisher", name: "publisher", widget: "string", required: false }
+
+  - name: "publications"
+    label: "Publications"
+    folder: "src/publications-data"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publication", name: "publication", widget: "string" }
+      - { label: "Year", name: "year", widget: "string" }
+      - { label: "Link", name: "link", widget: "string", required: false }
+      - { label: "Description", name: "description", widget: "text", required: false }
