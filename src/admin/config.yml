@@ -19,7 +19,7 @@ collections:
       - { label: "Cover Image", name: "cover", widget: "image", required: false }
       - { label: "Body", name: "body", widget: "markdown" }
 
-      - name: "books"
+  - name: "books"
     label: "Books"
     folder: "src/books-data"
     create: true
@@ -28,7 +28,7 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Cover Image", name: "cover", widget: "image" }
       - { label: "Description", name: "description", widget: "text" }
-      - { label: "Buy Link", name: "buylink", widget: "string", required: false }
+      - { label: "Buy Link (include https://)", name: "buylink", widget: "string", required: false }
       - { label: "Pen Name", name: "penname", widget: "string", required: false }
       - { label: "Publisher", name: "publisher", widget: "string", required: false }
 
@@ -41,5 +41,5 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publication", name: "publication", widget: "string" }
       - { label: "Year", name: "year", widget: "string" }
-      - { label: "Link", name: "link", widget: "string", required: false }
+      - { label: "Link (include https://)", name: "link", widget: "string", required: false }
       - { label: "Description", name: "description", widget: "text", required: false }
