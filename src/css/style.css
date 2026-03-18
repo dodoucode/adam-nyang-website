@@ -866,9 +866,9 @@ box-shadow: 0 38px 60px rgba(28, 26, 23, 0.6), 0 10px 20px rgba(28, 26, 23, 0.6)
   margin-bottom: 1.25rem;
 }
 .body-text{
-/* font-size: 1.1rem;
+ font-size: 1.3rem;
 color: var(--ink);
-font-weight:400; */
+font-weight:400; 
 }
 
 /* Achievement list */
@@ -884,7 +884,7 @@ font-weight:400; */
   align-items: flex-start;
   gap: 1rem;
   font-family: var(--font-serif);
-  font-size: 1rem;
+  font-size: 1.15rem;
   font-weight: 300;
   color: var(--ink);
   line-height: 1.1;
@@ -2265,10 +2265,10 @@ font-weight:400; */
   
    }
    .body-text{
-    font-size: 1.02rem;
+    font-size: 1.05rem;
    }
    .achievement{
-    font-size: 0.8rem;
+    font-size: 0.95rem;
    }
    .btn--ghost{
     margin-top: 1rem;
@@ -2310,6 +2310,6 @@ margin-left: .5rem;
     
   }
   .achievement{
-    font-size: 0.8rem;
+    font-size: 0.95rem;
   }
 }
