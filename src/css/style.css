@@ -414,9 +414,9 @@ input, textarea, select {
   flex-direction: column;
   justify-content: center;
   gap: 6px;
-  width: 32.31px;
-  height: 32.31px;
-  padding: 3.5px;
+  width: 33.31px;
+  height: 33.31px;
+  padding: 3.4px;
   background: none;
   border: none;
   cursor: pointer;
@@ -474,7 +474,7 @@ input, textarea, select {
 /* Mobile menu links */
 .mobile-menu a {
   font-family: var(--font-serif);
-  font-size: clamp(1.72rem, 5.2vw, 2.6rem);
+  font-size: clamp(1.724rem, 5.4vw, 2.8rem);
   font-weight: 350;
   font-style: italic;
   color: var(--ink);
@@ -586,7 +586,8 @@ input, textarea, select {
   letter-spacing: 0.31em;
   text-transform: uppercase;
   color: var(--sand);
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.3rem;
+  margin-top: 0;
 }
 
 /* Author name */
@@ -597,6 +598,7 @@ input, textarea, select {
   line-height: 1.0;
   letter-spacing: -0.02em;
   color: var(--ink);
+  margin-top: 1.5rem;
   margin-bottom: 0.15rem;
   margin-left: 0.8em;
 }
@@ -860,8 +862,8 @@ box-shadow: 0 38px 60px rgba(28, 26, 23, 0.6), 0 10px 20px rgba(28, 26, 23, 0.6)
 
 .about-snippet__heading {
   font-family: var(--font-serif);
-  font-size: clamp(2rem, 3.5vw, 3rem);
-  font-weight: 500;
+  font-size: clamp(2.2rem, 3.7vw, 3.2rem);
+  font-weight: 530;
   line-height: 1.1;
   margin-bottom: 1.25rem;
 }
@@ -2101,7 +2103,7 @@ font-weight:400;
   .hero__tagline{
   font-size:1.21rem;
   margin-bottom: 3rem;
-  margin-top: 2rem;
+  margin-top: 1.7rem;
 }
 }
 
@@ -2265,10 +2267,10 @@ font-weight:400;
   
    }
    .body-text{
-    font-size: 1.07rem;
+    font-size: 1.2rem;
    }
    .achievement{
-    font-size: 0.97rem;
+    font-size: 1rem;
    }
    .btn--ghost{
     margin-top: 1rem;
