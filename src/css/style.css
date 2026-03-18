@@ -2263,7 +2263,7 @@ font-weight:400; */
 @media (max-width: 540px){
   .hero__tagline{
    
-    font-size: 1.2em;
+    font-size: 1.3em;
     max-width: 500px;
     width:100%;
     margin-bottom: 2rem;
@@ -2281,7 +2281,7 @@ font-weight:400; */
 } 
 @media (max-width: 424px){
   .hero__tagline{
-font-size: 1.09rem;
+font-size: 1.1rem;
 margin-left: .5rem;
 
 
@@ -2293,13 +2293,13 @@ margin-left: .5rem;
 }
 @media (max-width: 390px){
   .hero__tagline{
-    font-size:1.04rem;
+    font-size:1.05rem;
     max-width: 350px;
   }
 }
 @media (max-width: 375px){
   .hero__tagline{
-    font-size:1.03rem;
+    font-size:1.04rem;
     max-width: 300px;
   }
 }
