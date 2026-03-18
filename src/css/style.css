@@ -173,9 +173,9 @@ input, textarea, select {
 /* Standard body paragraph text */
 .body-text {
   font-family: var(--font-serif);
-  font-size: 1.05rem;
-  font-weight: 300;
-  line-height: 1.9;
+  font-size: 1.1rem;
+  font-weight: 200;
+  line-height: 1.65;
   color: var(--muted);
 }
 
@@ -296,14 +296,15 @@ input, textarea, select {
   color: var(--muted);
   border: none;
   padding: 0;
-  border-bottom: 1px solid var(--sand);
+  border-bottom: 1.2px solid var(--sand);
   padding-bottom: 3px;
   letter-spacing: 0.2em;
-  font-size: 0.7rem;
+  font-size: 0.73rem;
   font-family: var(--font-sans);
   text-transform: uppercase;
   cursor: pointer;
   transition: color 0.3s ease;
+  margin-left: 0.9rem;
 }
 
 .btn--ghost:hover {
@@ -340,7 +341,7 @@ input, textarea, select {
   background-color: rgba(247, 243, 238, 0.95);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1.5px solid rgba(177, 162, 131, 0.2);
+  border-bottom: 1.7px solid rgba(177, 162, 131, 0.2);
   transition: box-shadow 0.3s ease;
 }
 
@@ -352,9 +353,9 @@ input, textarea, select {
 /* Site logo */
 .navbar__logo {
   font-family: var(--font-serif);
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 600;
-  letter-spacing: 0.25em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--ink);
   transition: color 0.3s ease;
@@ -369,18 +370,18 @@ input, textarea, select {
 .navbar__links {
   display: flex;
   align-items: center;
-  gap: 2.5rem;
+  gap: 1.7rem;
 }
 
 .navbar__links a {
   font-family: var(--font-sans);
-  font-size: 0.9rem;
-  font-weight: 450;
+  font-size: 0.73rem;
+  font-weight: 460;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--muted);
   position: relative;
-  padding-bottom: 3px;
+  padding-bottom: 0.5rem;
   transition: color 0.3s ease;
 }
 
@@ -413,9 +414,9 @@ input, textarea, select {
   flex-direction: column;
   justify-content: center;
   gap: 6px;
-  width: 32px;
-  height: 32px;
-  padding: 4px;
+  width: 32.21px;
+  height: 32.21px;
+  padding: 3.5px;
   background: none;
   border: none;
   cursor: pointer;
@@ -455,7 +456,7 @@ input, textarea, select {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: .9rem;
+  gap: .3rem;
   /* Hidden state */
   opacity: 0;
   pointer-events: none;
@@ -473,7 +474,7 @@ input, textarea, select {
 /* Mobile menu links */
 .mobile-menu a {
   font-family: var(--font-serif);
-  font-size: clamp(2rem, 6vw, 2.8rem);
+  font-size: clamp(1.6rem, 4vw, 2.3rem);
   font-weight: 300;
   font-style: italic;
   color: var(--ink);
@@ -580,24 +581,24 @@ input, textarea, select {
 /* Small eyebrow text */
 .hero__eyebrow {
   font-family: var(--font-sans);
-  font-size: 0.9rem;
-  font-weight: 800;
-  letter-spacing: 0.35em;
+  font-size: 0.79rem;
+  font-weight: 750;
+  letter-spacing: 0.31em;
   text-transform: uppercase;
   color: var(--sand);
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 /* Author name */
 .hero__name {
   font-family: var(--font-serif);
-  font-size: clamp(3.6rem, 6.1vw, 6.6rem);
-  font-weight: 800;
+  font-size: clamp(2.9rem, 4.9vw, 5.9rem);
+  font-weight: 600;
   line-height: 1.0;
   letter-spacing: -0.02em;
   color: var(--ink);
-  margin-bottom: 1.6rem;
-  margin-left: 1em;
+  margin-bottom: 0.15rem;
+  margin-left: 0.8em;
 }
 .hero__name.typewriter{
   color: var(--accent)
@@ -611,16 +612,18 @@ input, textarea, select {
 /* Tagline with left border */
 .hero__tagline {
   font-family: var(--font-serif);
-  font-size: 1.5rem;
-  font-weight: 500;
+  font-size: 1.35rem;
+  font-weight: 450;
   font-style: normal;
   color: var(--muted);
   line-height: 1.75;
   max-width: 480px;
-  margin-bottom: 2rem;
+  margin-bottom: 1.8rem;
   padding-left: 1.5rem;
   border-left: 3px solid var(--sand);
 }
+
+
 
 /* Right photo column */
 .hero__right {
@@ -636,9 +639,11 @@ input, textarea, select {
 .hero__img-wrap {
   position: relative;
   width: 100%;
-  max-width:545px;
-  height: 550px;
-  overflow:hidden
+  max-width:530px;
+  height: 570px;
+  overflow:hidden;
+  /* box-shadow: 18px 18px 0px var(--sand), 20px 20px 40px rgba(28, 26, 23,0.25); */
+box-shadow: 0 38px 60px rgba(28, 26, 23, 0.6), 0 10px 20px rgba(28, 26, 23, 0.6);
 }
 
 .hero__img-wrap img {
@@ -856,13 +861,14 @@ input, textarea, select {
 .about-snippet__heading {
   font-family: var(--font-serif);
   font-size: clamp(2rem, 3.5vw, 3rem);
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.1;
   margin-bottom: 1.25rem;
 }
 .body-text{
-font-size: 1.3rem;
+/* font-size: 1.1rem;
 color: var(--ink);
+font-weight:400; */
 }
 
 /* Achievement list */
@@ -878,7 +884,7 @@ color: var(--ink);
   align-items: flex-start;
   gap: 1rem;
   font-family: var(--font-serif);
-  font-size: 1.15rem;
+  font-size: 1rem;
   font-weight: 300;
   color: var(--ink);
   line-height: 1.1;
@@ -1239,8 +1245,8 @@ color: var(--ink);
 
 .footer__links a {
   font-family: var(--font-serif);
-  font-size: 1.25rem;
-  font-weight: 700;
+  font-size: 1.21rem;
+  font-weight: 650;
   color: var(--muted);
   border-bottom: 1px solid var(--accent);
   transition: color 0.3s ease;
@@ -1289,7 +1295,7 @@ color: var(--ink);
 
 .footer__copy {
   font-family: var(--font-sans);
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   font-weight: 650;
   letter-spacing: 0.12em;
   color: var(--muted);
@@ -1928,76 +1934,101 @@ color: var(--ink);
 /* ============================================================
    20. RESPONSIVE — TABLET (max-width: 1024px)
 ============================================================ */
-@media (max-width:1024px) {
+/* ============================================================
+   20. RESPONSIVE — TABLET (max-width: 1024px)
+   — 2 column layouts maintained
+   — Spacing and font sizes reduced
+============================================================ */
+
+@media (max-width: 1280px){
+  .nav__links a {
+    font-size: 0.75rem;
+    }
+  }
+@media (max-width:1029px){
+  .hero__tagline{
+    max-width: 530px;
+    font-size: 1.3rem;
+  }
+
+}
+@media (max-width: 1024px) {
 
   :root { --section-padding: 6rem 3rem; }
 
   .navbar { padding: 0 2.5rem; }
 
-  /* Hero stacks to single column */
-  .hero { grid-template-columns: 1fr; }
-  .hero::before { display: none; }
-  .hero__left { 
-    width:100vw;
-    padding: 5rem .5rem 2rem;
-     min-height: 50vh; 
-    justify-content:flex-start;
-     align-items:center; }
-  .hero__right { 
-    background-color:var(--light-sand);
-    padding-left: 1rem;
-    padding-right: 1rem;
-   }
-   .hero__name{
-   margin-right:auto;
-    margin-left:auto;
-    margin-bottom:1px;
-   }
-   .hero__tagline{
-    width:100%;
-    max-width:550px;
-    margin-right:auto;
-    margin-left:auto;
-    margin-top:1px;
-    font-size: 1.55rem;
-   }
-  .hero__scroll { left: 3rem; }
+  /* Hero stays 2 columns but tighter */
+  .hero { grid-template-columns: 1fr 1fr; }
+  .hero__left {
+    padding: 5rem 2rem 3rem;
+    min-height: auto;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .hero__right {
+    background-color: var(--light-sand);
+    padding: 3rem 2rem;
+  }
+  .hero__img-wrap {
+    width: 100%;
+    max-width: 400px;
+    height: 450px;
+  }
+  .hero__name {
+    font-size: clamp(2.8rem, 5vw, 5rem);
+    margin-left: 0;
+  }
+  .hero__tagline {
+    font-size: 1.3rem;
+    max-width: 100%;
+  }
+  .hero__scroll { left: 2rem; }
 
-  /* Sections stack */
-  .featured-book { grid-template-columns: 1fr; gap: 3rem; padding: 5rem 3rem; }
-  .about-snippet { grid-template-columns: 1fr; gap: 3rem; }
+  /* Featured book stays 2 columns */
+  .featured-book { grid-template-columns: 1fr 1.2fr; gap: 3rem; padding: 5rem 3rem; }
+  .featured-book__cover-img,
+  .featured-book__cover-placeholder { width: 220px; height: 320px; }
+
+  /* About snippet stays 2 columns */
+  .about-snippet { grid-template-columns: 1fr 1fr; gap: 3rem; }
+
+  /* Blog preview 2 columns */
   .blog-preview__grid { grid-template-columns: 1fr 1fr; }
   .blog-preview__grid .blog-card:first-child .blog-card__img { height: 220px; }
 
   /* Footer */
-  .footer { padding: 4rem 3rem 0; 
-  overflow:hidden;}
-  .footer__grid { display: flex; justify-content:space-between;
-  flex-wrap: wrap;
-align-items:center;}
+  .footer { padding: 4rem 3rem 0; overflow: hidden; }
+  .footer__grid { display: flex; justify-content: space-between; flex-wrap: wrap; align-items: flex-start; gap: 2rem; }
 
   /* Newsletter */
   .newsletter { padding: 5rem 3rem; }
 
-  /* About page */
-  .about-content { grid-template-columns: 1fr; padding: 4rem 3rem 6rem; gap: 3rem; }
-  .about-content__photo-col { position: static; }
+  /* About page stays 2 columns */
+  .about-content { grid-template-columns: 1fr 1.5fr; padding: 4rem 3rem 6rem; gap: 3rem; }
+  .about-content__photo-col { position: sticky; top: calc(var(--nav-height) + 2rem); }
   .about-achievements { grid-template-columns: 1fr 1fr; padding: 4rem 3rem; }
 
-  /* Books page */
-  .book-section,
+  /* Books page stays 2 columns */
+  .book-section {
+    grid-template-columns: 1fr 1.4fr;
+    padding: 4rem 3rem;
+    gap: 3rem;
+  }
   .book-section:nth-child(even) {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1.4fr 1fr;
     padding: 4rem 3rem;
     gap: 3rem;
   }
   .book-section:nth-child(even) .book-section__cover,
   .book-section:nth-child(even) .book-section__info { order: unset; }
+  .book-section__cover-img,
+  .book-section__cover-placeholder { width: 220px; height: 320px; }
   .books-teaser { padding: 4rem 3rem; }
 
   /* Publications */
   .publications-intro { padding: 3rem 3rem 0; }
-  .publications-list  { padding: 2rem 3rem 6rem; }
+  .publications-list { padding: 2rem 3rem 6rem; }
   .pub-entry { grid-template-columns: 80px 1fr auto; }
   .pub-entry__link { display: inline-block; }
 
@@ -2005,41 +2036,132 @@ align-items:center;}
   .blog-filters { padding: 0 3rem; }
   .blog-grid { grid-template-columns: 1fr 1fr; padding: 3rem 3rem 6rem; }
 
-  /* Contact */
-  .contact-content { grid-template-columns: 1fr; padding: 4rem 3rem 6rem; gap: 3rem; }
+  /* Contact stays 2 columns */
+  .contact-content { grid-template-columns: 1fr 1.5fr; padding: 4rem 3rem 6rem; gap: 3rem; }
 
   /* Page hero */
   .page-hero { padding: 8rem 3rem 4rem; }
   .page-hero::before { font-size: 10rem; right: 2rem; }
+  .footer{
+    overflow:hidden;
+  }
+}
+@media (max-width:888px){
+  
+  nav__links a {
+    font-size: 0.7rem;
+  }
+.hero__tagline{
+  font-size:1.25rem;
+  margin-bottom: 4rem;
+  margin-top: 3rem;
+}
+.hero__name{
+  margin-top:2rem;
+  font-size: 3.6rem;
+  font-weight:600;
+
+}
+.hero__eyebrow{
+  margin-bottom:4rem;
+  margin-top:0;
+}
+.hero__right{
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+ 
+}
+.hero__right img{
+  height:100%;
+    max-height:700px;
+
+   margin-top:0;
+  margin-bottom: 0;
+}
+}
+@media (max-width: 866px){
+  .btn--ghost{
+    margin-top: 2.2rem;
+    font-weight: 400;
+  }
+}
+@media (max-width:900px){
+  
+  .navbar__links a{
+    font-size: 0.6rem;
+  }
+}
+@media (max-width: 792px){
+  .nav__links{
+    gap: 0.7rem;
+  }
+  .nav__links a{
+    font-size: 0.75;
+  }
+  .hero__tagline{
+  font-size:1.21rem;
+  margin-bottom: 3rem;
+  margin-top: 2rem;
+}
+}
+
+@media (max-width: 769px){
+  /* Nav */
+  .navbar { padding: 0 1.5rem; }
+  .navbar__links { display: none; }
+  .hamburger { display: flex; }
+  
 }
 
 
 /* ============================================================
    21. RESPONSIVE — MOBILE (max-width: 768px)
+   — Single column layouts
+   — Hamburger menu shown
+   — Full width everything
 ============================================================ */
-@media (max-width: 985px) {
+@media (max-width: 768px) {
 
   :root { --section-padding: 5rem 1.5rem; }
-  
 
   /* Nav */
   .navbar { padding: 0 1.5rem; }
   .navbar__links { display: none; }
   .hamburger { display: flex; }
 
-  /* Hero */
-  .hero__left { padding: 5rem 1.5rem 3rem; }
+  /* Hero stacks to single column */
+  .hero { grid-template-columns: 1fr; }
+  .hero::before { display: none; }
+  .hero__left {
+    padding: 5rem 1.5rem 3rem;
+    min-height: auto;
+    align-items: center;
+  }
+  .hero__eyebrow{
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero__tagline{
+  font-size: 1.37rem;
+    max-width: 450px;
+    margin-top:1.5rem;
+    margin-left: 1.2rem;
+  }
+  .hero__right {
+    background-color: var(--light-sand);
+    padding: 2rem 1.5rem 3rem;
+  }
   .hero__scroll { left: 1.5rem; }
 
-  /* Featured book */
-  .featured-book { padding: 5rem 1.5rem; }
+  /* Featured book single column */
+  .featured-book { grid-template-columns: 1fr; padding: 5rem 1.5rem; }
   .featured-book__cover-img,
-  .featured-book__cover-placeholder { width: 240px; height: 340px; margin: 0 auto; }
+  .featured-book__cover-placeholder { width: 220px; height: 320px; margin: 0 auto; }
 
-  /* About snippet */
-  .about-snippet { padding: 5rem 1.5rem; }
+  /* About snippet single column */
+  .about-snippet { grid-template-columns: 1fr; padding: 5rem 1.5rem; }
 
-  /* Blog preview */
+  /* Blog preview single column */
   .blog-preview { padding: 5rem 1.5rem; }
   .blog-preview__grid { grid-template-columns: 1fr; }
 
@@ -2049,37 +2171,41 @@ align-items:center;}
   .newsletter__input { border-right: 1px solid rgba(247, 243, 238, 0.3); border-bottom: none; }
 
   /* Footer */
-  .footer { padding: 4rem 1.5rem 0; 
-  overflow:hidden;}
-  .footer__grid { /*grid-template-columns: 1fr; gap: 2.5rem; padding-bottom: 3rem*/ display: flex;
-    flex-wrap:wrap;
-    align-items:center;
- justify-content:space-between; }
+  .footer { padding: 4rem 1.5rem 0; overflow: hidden; }
+  .footer__grid { display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: 2rem; padding-bottom: 3rem; }
   .footer__bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
 
-  /* About page */
-  .about-content { padding: 4rem 1.5rem 5rem; }
+  /* About page single column */
+  .about-content { grid-template-columns: 1fr; padding: 4rem 1.5rem 5rem; gap: 3rem; }
+  .about-content__photo-col { position: static; }
   .about-achievements { grid-template-columns: 1fr; padding: 4rem 1.5rem; gap: 1.5rem; }
 
-  /* Books */
+  /* Books single column */
   .book-section,
-  .book-section:nth-child(even) { padding: 4rem 1.5rem; }
+  .book-section:nth-child(even) {
+    grid-template-columns: 1fr;
+    padding: 4rem 1.5rem;
+    gap: 2rem;
+  }
+  .book-section:nth-child(even) .book-section__cover,
+  .book-section:nth-child(even) .book-section__info { order: unset; }
   .book-section__cover-img,
-  .book-section__cover-placeholder { width: 240px; height: 340px; margin: 0 auto; }
+  .book-section__cover-placeholder { width: 220px; height: 320px; margin: 0 auto; }
   .books-teaser { padding: 4rem 1.5rem; }
 
   /* Publications */
   .publications-intro { padding: 3rem 1.5rem 0; }
-  .publications-list  { padding: 2rem 1.5rem 5rem; }
+  .publications-list { padding: 2rem 1.5rem 5rem; }
   .pub-entry { grid-template-columns: 1fr; gap: 0.4rem; padding: 1.5rem 0; }
+  .pub-entry__link { display: inline-block; margin-top: 0.25rem; }
 
   /* Blog */
   .blog-filters { padding: 0 1.5rem; }
-  .filter-btn   { padding: 1rem; }
-  .blog-grid    { grid-template-columns: 1fr; padding: 3rem 1.5rem 5rem; }
+  .filter-btn { padding: 1rem; }
+  .blog-grid { grid-template-columns: 1fr; padding: 3rem 1.5rem 5rem; }
 
-  /* Contact */
-  .contact-content { padding: 3rem 1.5rem 5rem; }
+  /* Contact single column */
+  .contact-content { grid-template-columns: 1fr; padding: 3rem 1.5rem 5rem; gap: 3rem; }
   .form-row { grid-template-columns: 1fr; }
 
   /* Page hero */
@@ -2090,17 +2216,7 @@ align-items:center;}
   .section-header { flex-direction: column; align-items: flex-start; gap: 1rem; margin-bottom: 2.5rem; }
 }
 
-/* @media (max-width: 900px){
-  .pub-entry{
-    flex-wrap: wrap;
-  }
-  .pub-entry__link{
-    display: inline-block;
-    width:100%;
-    margin-top: 0.5rem;
-  }
 
-} */
 
 @media (max-width: 615px) {
   .hero {
@@ -2142,5 +2258,57 @@ align-items:center;}
 @media (max-width: 431px){
    .hero__tagline {
     font-size: 1.25rem;
+  }
+}
+@media (max-width: 540px){
+  .hero__tagline{
+   
+    font-size: 1.2em;
+    max-width: 500px;
+    width:100%;
+    margin-bottom: 2rem;
+  
+   }
+   .body-text{
+    font-size: 1.02rem;
+   }
+   .achievement{
+    font-size: 0.8rem;
+   }
+   .btn--ghost{
+    margin-top: 1rem;
+   }
+} 
+@media (max-width: 424px){
+  .hero__tagline{
+font-size: 1.09rem;
+margin-left: .5rem;
+
+
+  }
+  .btn--ghost, .btn--dark{
+  margin-left:auto;
+  margin-right:auto;
+}
+}
+@media (max-width: 390px){
+  .hero__tagline{
+    font-size:1.04rem;
+    max-width: 350px;
+  }
+}
+@media (max-width: 375px){
+  .hero__tagline{
+    font-size:1.03rem;
+    max-width: 300px;
+  }
+}
+@media (max-width: 360px){
+  .body-text{
+    font-size: 1.03rem;
+    
+  }
+  .achievement{
+    font-size: 0.8rem;
   }
 }
