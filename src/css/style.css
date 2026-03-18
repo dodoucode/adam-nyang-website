@@ -474,7 +474,7 @@ input, textarea, select {
 /* Mobile menu links */
 .mobile-menu a {
   font-family: var(--font-serif);
-  font-size: clamp(1.6rem, 4vw, 2.3rem);
+  font-size: clamp(1.7rem, 5vw, 2.4rem);
   font-weight: 300;
   font-style: italic;
   color: var(--ink);
@@ -586,7 +586,7 @@ input, textarea, select {
   letter-spacing: 0.31em;
   text-transform: uppercase;
   color: var(--sand);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.15rem;
 }
 
 /* Author name */
@@ -2054,16 +2054,16 @@ font-weight:400; */
 .hero__tagline{
   font-size:1.25rem;
   margin-bottom: 4rem;
-  margin-top: 3rem;
+  margin-top: 2.5rem;
 }
 .hero__name{
-  margin-top:2rem;
+  margin-top:1.8rem;
   font-size: 3.6rem;
   font-weight:600;
 
 }
 .hero__eyebrow{
-  margin-bottom:4rem;
+  margin-bottom:2.8rem;
   margin-top:0;
 }
 .hero__right{
@@ -2255,11 +2255,6 @@ font-weight:400; */
 .hero__name{
   min-height: 2.2em;
 }
-@media (max-width: 431px){
-   .hero__tagline {
-    font-size: 1.25rem;
-  }
-}
 @media (max-width: 540px){
   .hero__tagline{
    
@@ -2279,9 +2274,15 @@ font-weight:400; */
     margin-top: 1rem;
    }
 } 
+@media (max-width: 431px){
+   .hero__tagline {
+    font-size: 1.27rem;
+  }
+}
+
 @media (max-width: 424px){
   .hero__tagline{
-font-size: 1.1rem;
+font-size: 1.12rem;
 margin-left: .5rem;
 
 
@@ -2293,13 +2294,13 @@ margin-left: .5rem;
 }
 @media (max-width: 390px){
   .hero__tagline{
-    font-size:1.05rem;
+    font-size:1.06rem;
     max-width: 350px;
   }
 }
 @media (max-width: 375px){
   .hero__tagline{
-    font-size:1.04rem;
+    font-size:1.05rem;
     max-width: 300px;
   }
 }
