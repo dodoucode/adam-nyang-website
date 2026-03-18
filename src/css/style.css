@@ -474,11 +474,11 @@ input, textarea, select {
 /* Mobile menu links */
 .mobile-menu a {
   font-family: var(--font-serif);
-  font-size: clamp(1.8rem, 6vw, 3rem);
-  font-weight: 350;
+  font-size: clamp(2rem, 6vw, 4rem);
+  font-weight: 400;
   font-style: italic;
   color: var(--ink);
-  border-bottom: 1px solid var(--accent);
+  border-bottom: 1.1px solid var(--accent);
   transition: color 0.3s ease;
 }
 
