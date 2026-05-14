@@ -220,7 +220,7 @@ const typewriterEl = document.querySelector('.hero__name');
 if (typewriterEl) typewriterEl.classList.add('typewriter');
 
 if (typewriterEl) {
-  const words = ['Adam Nyang', 'International Author', 'Public Speaker', 'Universal Voice'];
+  const words = ['Romance Author', 'Emotional Storyteller', 'Gambian Literary Voice'];
   let wordIndex = 0;
   let charIndex = 0;
   let isDeleting = false;
